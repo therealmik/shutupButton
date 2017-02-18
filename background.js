@@ -42,19 +42,6 @@ function muteTabs(tabs) {
 
 
 /**
- * Activates a tab.
- *
- * @param {!Tab} tab The tab that you want muted.
- * @return {!Promise<Tab>}
- */
-function activateTab(tab) {
-  return new Promise(resolve => {
-    chrome.tabs.update(tab.id, {active: true}, resolve);
-  });
-}
-
-
-/**
  * Handles the click event for the browserAction badge.
  *
  * @param {!Tab} activeTab The tab that was active when the badge was clicked.

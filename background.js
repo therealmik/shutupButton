@@ -8,7 +8,7 @@
 /**
  * Gets all audible tabs.
  *
- * @return {!Promise<!Array<Tab>>}
+ * @return {!Promise<!Array<!Tab>>}
  */
 function getAudibleTabs() {
   return new Promise(resolve => {
@@ -21,7 +21,7 @@ function getAudibleTabs() {
  * Mutes a tab.
  *
  * @param {!Tab} tab The tab that you want muted.
- * @return {!Promise<Tab>}
+ * @return {!Promise<!Tab>}
  */
 function muteTab(tab) {
   return new Promise(resolve => {
@@ -34,7 +34,7 @@ function muteTab(tab) {
  * Mutes a list of tabs.
  *
  * @param {!Array<!Tab>} tabs Tabs to be muted.
- * @return {!Promise<!Array<Tab>>}
+ * @return {!Promise<!Array<!Tab>>}
  */
 function muteTabs(tabs) {
   return Promise.all(tabs.map(muteTab));
